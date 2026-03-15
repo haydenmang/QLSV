@@ -81,9 +81,10 @@
             // lb_login
             // 
             this.lb_login.AutoSize = true;
+            this.lb_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_login.Location = new System.Drawing.Point(137, 45);
             this.lb_login.Name = "lb_login";
-            this.lb_login.Size = new System.Drawing.Size(75, 16);
+            this.lb_login.Size = new System.Drawing.Size(120, 25);
             this.lb_login.TabIndex = 5;
             this.lb_login.Text = "Đăng Nhập";
             // 
