@@ -75,8 +75,40 @@ namespace QLSV
                 dtp_NgaySinh.Value = ngaySinh;
         }
 
-        private void btn_Them_Click(object sender, EventArgs e)
+        private void btn_Xoa_Click(object sender, EventArgs e)
         {
+            string maSV = txt_MaSV.Text.Trim();
+            if (string.IsNullOrEmpty(maSV))
+            {
+                MessageBox.Show("Vui lòng chọn sinh viên cần xóa.");
+                return;
+            }
+
+            if (MessageBox.Show($"Bạn có chắc muốn xóa sinh viên {maSV}?", "Xác nhận", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(strCon))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM SinhVien WHERE MaSV = @MaSV", conn);
+                    cmd.Parameters.AddWithValue("@MaSV", maSV);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Xóa thành công!");
+                txt_MaSV.Clear();
+                txt_HoTen.Clear();
+                txt_NoiSinh.Clear();
+                LoadSinhVien();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)        {
             string maSV = txt_MaSV.Text.Trim();
             string hoTen = txt_HoTen.Text.Trim();
 

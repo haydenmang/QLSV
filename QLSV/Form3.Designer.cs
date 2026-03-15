@@ -139,6 +139,7 @@
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
 
             // btn_LamMoi
             this.btn_LamMoi.BackColor = System.Drawing.Color.LightGray;
