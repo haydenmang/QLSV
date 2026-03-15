@@ -179,6 +179,7 @@
             this.btn_Search.Size = new System.Drawing.Size(100, 28);
             this.btn_Search.Text = "Tìm kiếm";
             this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
 
             // pnl_Right
             this.pnl_Right.Controls.Add(this.dgv_Admin_SinhVien);
