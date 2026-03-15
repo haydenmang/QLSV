@@ -131,6 +131,7 @@
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
 
             // btn_Xoa
             this.btn_Xoa.BackColor = System.Drawing.Color.LightCoral;
@@ -148,6 +149,7 @@
             this.btn_LamMoi.Text = "Làm mới";
             this.btn_LamMoi.Name = "btn_LamMoi";
             this.btn_LamMoi.UseVisualStyleBackColor = false;
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
 
             // dgv_Admin_SinhVien
             this.dgv_Admin_SinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
